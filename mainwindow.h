@@ -16,10 +16,14 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
+    void GetText(QString filename = "text.txt");
+
 private slots:
     void on_ifstream1_clicked();
     void on_ofstream_clicked();
 
+
+    void on_ifstream1_2_clicked();
 
 private:
     Ui::MainWindow *ui;
