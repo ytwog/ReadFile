@@ -63,7 +63,7 @@ void MainWindow::GetText(QString filename)
     setlocale(LC_ALL, "Russian");
     QString vowels = "оеаиёуыюэяОЕАИЁУЫЮЭЯ";
     int key=3, count = 0, ind=0;
-
+    QStringList Newlist = list;
     QStringList::iterator it;
     for (it = list.begin(); it != list.end(); ++it)
     {
@@ -83,13 +83,14 @@ void MainWindow::GetText(QString filename)
         }
         if(count==key)
         {
-            list.removeAt(ind);
+            Newlist.removeAt(ind);
         }
         else
         {
             ind++;
         }
     }
+    list = Newlist;
 
 
     QString retext = list.join("");
