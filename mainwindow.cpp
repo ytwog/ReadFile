@@ -73,8 +73,6 @@ void MainWindow::GetText(QString filename)
         {
             for(int j = 0; j <20;j++)
             {
-                QChar I = word[i];
-                QChar J = vowels[j];
                 if((word[i])==(vowels[j]))
                 {
                     count++;
@@ -83,12 +81,9 @@ void MainWindow::GetText(QString filename)
         }
         if(count==key)
         {
-            Newlist.removeAt(ind);
+            Newlist.replace(ind, "<s>" + Newlist.at(ind) + "</s>");
         }
-        else
-        {
-            ind++;
-        }
+        ind++;
     }
     list = Newlist;
 

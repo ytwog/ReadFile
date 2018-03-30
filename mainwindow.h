@@ -16,7 +16,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
-    void GetText(QString filename = "text.txt");
+    void GetText(QString filename = "C://Abc//qt//projects//ReadFile//text.txt");
 
 private slots:
     void on_ifstream1_clicked();
